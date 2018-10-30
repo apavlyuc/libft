@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_factorial.c                                     :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apavlyuc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/03 21:39:22 by apavlyuc          #+#    #+#             */
-/*   Updated: 2017/12/03 23:02:20 by apavlyuc         ###   ########.fr       */
+/*   Created: 2017/11/20 15:31:42 by apavlyuc          #+#    #+#             */
+/*   Updated: 2018/10/30 16:40:12 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long int	ft_factorial(int n)
+#include "../../inc/libft.h"
+
+int	ft_isalnum(int c)
 {
-	if (n == 0)
-		return (1);
-	if (n > 0)
-		return (ft_factorial(n - 1) * n);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

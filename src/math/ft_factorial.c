@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_factorial.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apavlyuc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 20:40:06 by apavlyuc          #+#    #+#             */
-/*   Updated: 2017/11/30 14:51:31 by apavlyuc         ###   ########.fr       */
+/*   Created: 2017/12/03 21:39:22 by apavlyuc          #+#    #+#             */
+/*   Updated: 2018/10/30 15:00:15 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void				*ft_memset(void *b, int c, size_t len)
+unsigned long long		ft_factorial(int n)
 {
-	int				i;
-	unsigned char	*ref;
+	unsigned long long	ret;
 
-	i = -1;
-	ref = (unsigned char *)b;
-	while (++i < (int)len)
-		*(ref + i) = (unsigned char)c;
-	return (b);
+	ret = 1;
+	if (n <= 1)
+		return (ret);
+	while (n != 0)
+		ret *= n--;
+	return (0);
 }

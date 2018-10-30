@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 06:07:51 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 13:20:20 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 17:10:26 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,28 +46,28 @@ static int		get_del(int n)
 
 char			*ft_itoa(int n)
 {
-	char		*string;
+	char		*ret;
 	long int	nn;
 	int			i;
 	int			del;
 
 	nn = n;
-	string = (char *)ft_memalloc(sizeof(char) * (get_int_size(nn) + 1));
+	ret = (char *)ft_memalloc(sizeof(char) * (get_int_size(nn) + 1));
 	i = -1;
-	if (!string)
+	if (!ret)
 		return (NULL);
 	if (nn < 0)
 	{
-		*(string + ++i) = '-';
+		*(ret + ++i) = '-';
 		nn = -nn;
 	}
 	del = get_del(n);
 	while (del != 0)
 	{
-		*(string + ++i) = (nn / del) + '0';
+		*(ret + ++i) = (nn / del) + '0';
 		nn -= del * (nn / del);
 		del /= 10;
 	}
-	*(string + ++i) = '\0';
-	return (string);
+	*(ret + ++i) = '\0';
+	return (ret);
 }

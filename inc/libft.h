@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apavlyuc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 16:14:49 by apavlyuc          #+#    #+#             */
-/*   Updated: 2017/12/04 02:02:06 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 14:41:15 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void				*ft_memset(void *b, int c, size_t len);
-void				ft_bzero(void *s, size_t n);
+void				*ft_memset(void *b, int c, unsigned long long len);
+void				ft_bzero(void *s, unsigned long long n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);

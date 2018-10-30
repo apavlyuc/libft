@@ -6,19 +6,19 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 00:55:39 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 19:46:45 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 19:57:08 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 #include <stdlib.h>
 
-void	*ft_memalloc(size_t size)
+void		*ft_memalloc(unsigned long long size)
 {
-	void *mem;
+	void	*mem;
 
 	mem = malloc(size);
-	if (mem != NULL)
+	if (mem != 0)
 		ft_bzero(mem, size);
 	return ((void *)mem);
 }

@@ -6,7 +6,7 @@
 #    By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/30 12:54:21 by apavlyuc          #+#    #+#              #
-#    Updated: 2018/10/30 13:18:48 by apavlyuc         ###   ########.fr        #
+#    Updated: 2018/10/30 20:10:20 by apavlyuc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ $(TARGET): $(OBJS)
 	@ranlib $@
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	@$(CC) -o $@ -c $< $(CFALGS)
+	@$(CC) -o $@ -c $< $(FLAGS)
 
 $(OBJ_DIR):
 	@mkdir -p $(DIRS)

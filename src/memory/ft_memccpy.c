@@ -3,29 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apavlyuc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 16:38:30 by apavlyuc          #+#    #+#             */
-/*   Updated: 2017/11/30 14:49:46 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 20:03:43 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void		*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void					*ft_memccpy(void *dst, const void *src, int c, unsigned long long n)
 {
-	int				i;
-	unsigned char	*ref1;
-	unsigned char	*ref2;
+	unsigned long long	i;
+	unsigned char		*ref1;
+	unsigned char		*ref2;
 
-	i = -1;
+	i = 0;
 	ref1 = (unsigned char *)dst;
 	ref2 = (unsigned char *)src;
-	while (++i < (int)n)
+	while (i < n)
 	{
 		*(ref1 + i) = *(ref2 + i);
 		if (*(ref1 + i) == (unsigned char)c)
-			return (dst + ++i);
+			return (ref1 + ++i);
+		++i;
 	}
-	return (NULL);
+	return (0);
 }

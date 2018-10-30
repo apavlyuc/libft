@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_last.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 13:45:50 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 19:38:14 by apavlyuc         ###   ########.fr       */
+/*   Created: 2018/10/30 19:06:21 by apavlyuc          #+#    #+#             */
+/*   Updated: 2018/10/30 19:48:32 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-void		ft_lstadd(t_list **alst, t_list *new)
+void		ft_lstadd_last(t_list **dst, t_list *new)
 {
-	if (alst == NULL || new == NULL)
+	t_list	**tmp;
+
+	if (!dst || !new)
 		return ;
-	new->next = *alst;
-	*alst = new;
+	if (*dst == NULL)
+	{
+		*dst = new;
+		return ;
+	}
+	tmp = dst;
+	while ((*tmp)->next)
+		*tmp = (*tmp)->next;
+	(*tmp)->next = new;
 }

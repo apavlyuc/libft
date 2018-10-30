@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 06:07:51 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 18:09:06 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 18:27:09 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ char			*ft_itoa(int n)
 	int			del;
 
 	number = n;
-	ret = (char *)ft_memalloc(sizeof(char) * (ft_numlen(number) + 1));
+	RETN_IF_NULL((ret = (char *)
+		ft_memalloc(sizeof(char) * (ft_numlen(number) + 1))));
 	i = 0;
 	if (n < 0)
 	{

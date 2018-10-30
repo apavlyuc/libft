@@ -6,20 +6,17 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 12:34:49 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:26:05 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 19:48:12 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
-#include <stdlib.h>
 
-t_list		*ft_lstnew(void const *content, size_t content_size)
+t_list		*ft_lstnew(void const *content, unsigned long long content_size)
 {
 	t_list	*list;
 
-	list = malloc(sizeof(*list));
-	if (list == NULL)
-		return (NULL);
+	RETN_IF_NULL((list = ft_memalloc(sizeof(*list))));
 	if (content == NULL)
 	{
 		list->content = NULL;
@@ -27,7 +24,7 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		list->content = malloc(content_size);
+		list->content = ft_memalloc(content_size);
 		if (list->content == NULL)
 		{
 			ft_memdel((void **)&list);

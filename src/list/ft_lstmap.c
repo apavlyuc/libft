@@ -6,11 +6,10 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 13:58:11 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:26:00 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 19:51:26 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "../../inc/libft.h"
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
@@ -27,7 +26,7 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		temp->next = f(lst->next);
 		if (!temp->next)
 		{
-			free(temp->next);
+			ft_memdel((void **)&(temp->next));
 			return (NULL);
 		}
 		temp = temp->next;

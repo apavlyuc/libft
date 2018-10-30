@@ -6,46 +6,17 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 07:15:37 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:25:26 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 19:51:49 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-static int		get_del(int nn)
+void		ft_putnbr_fd(int n, int fd)
 {
-	int			del;
+	char	*num;
 
-	del = 1000000000;
-	while ((nn / del) == 0)
-		del /= 10;
-	return (del);
-}
-
-void			ft_putnbr_fd(int n, int fd)
-{
-	int	del;
-
-	if (n == -2147483648)
-	{
-		ft_putstr_fd("-2147483648", fd);
-		return ;
-	}
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n = -n;
-	}
-	if (n == 0)
-	{
-		ft_putstr_fd("0", fd);
-		return ;
-	}
-	del = get_del(n);
-	while (del != 0)
-	{
-		ft_putchar_fd((n / del) + '0', fd);
-		n -= del * (n / del);
-		del /= 10;
-	}
+	RET_IF_NULL((num = ft_itoa(n)));
+	ft_putstr(num);
+	ft_memdel((void **)&num);
 }

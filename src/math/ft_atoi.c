@@ -6,14 +6,14 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 18:10:09 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 14:13:41 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 14:15:11 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 static	int	get_number(const char *str)
 {
 	int		ret;
-	int		sign;
+	char	sign;
 
 	sign = 1;
 	if (*str == '-')

@@ -6,11 +6,11 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 21:55:40 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 13:20:20 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 17:26:33 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 int		ft_partscount(char *str, char *del)
 {

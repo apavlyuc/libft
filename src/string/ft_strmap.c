@@ -6,11 +6,11 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 01:47:13 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 13:20:20 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 17:27:26 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 #include <stdlib.h>
 
 char		*ft_strmap(char const *s, char (*f)(char))

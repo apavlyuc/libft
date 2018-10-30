@@ -6,11 +6,11 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 19:47:20 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 13:20:20 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 17:27:34 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 07:14:07 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 13:20:20 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 17:25:16 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 void	ft_putendl_fd(char const *s, int fd)
 {

@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 16:14:49 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 14:41:15 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 17:20:12 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+
+# define EXIT_IF_NULL(x) ( if (!x) exit(-1);)
 
 typedef struct		s_list
 {

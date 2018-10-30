@@ -6,12 +6,12 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 06:07:51 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:10:26 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 17:25:03 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 static int		get_int_size(long int n)
 {

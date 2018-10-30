@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 16:14:49 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 20:10:31 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 20:13:02 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,10 @@ void				ft_memdel(void	**ap);
 /*
 **			number block
 */
-long int			ft_factorial(int n);
+unsigned long long	ft_factorial(int n);
 int					ft_numlen(long long num);
 int					ft_abs(int n);
-long int			ft_pow(int n, int p);
+long long			ft_pow(int n, int p);
 /*
 **			string block
 */

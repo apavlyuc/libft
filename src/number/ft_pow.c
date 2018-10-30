@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apavlyuc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 23:18:10 by apavlyuc          #+#    #+#             */
-/*   Updated: 2017/12/03 23:20:01 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 20:12:52 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long int	ft_pow(int n, int p)
+long long	ft_pow(int n, int p)
 {
 	int		answer;
 

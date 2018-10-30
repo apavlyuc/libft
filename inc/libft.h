@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 16:14:49 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:20:12 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/10/30 17:56:35 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,40 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+/*
+**			char block
+*/
+int					ft_isalnum(int c);
+int					ft_isalpha(int c);
+int					ft_isascii(int c);
+int					ft_isdigit(int c);
+int					ft_isprint(int c);
+int					ft_tolower(int c);
+int					ft_toupper(int c);
+/*
+**			convert block
+*/
+int					ft_atoi(const char *str);
+char				*ft_itoa(int n);
+/*
+**			io block
+*/
 
+/*
+**			list block
+*/
+
+/*
+**			memory block
+*/
+
+/*
+**			number block
+*/
+int					ft_numlen(long long num);
+/*
+**			string block
+*/
 void				*ft_memset(void *b, int c, unsigned long long len);
 void				ft_bzero(void *s, unsigned long long n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
@@ -44,14 +77,6 @@ char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *h, const char *n, size_t l);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-int					ft_atoi(const char *str);
-int					ft_isalpha(int c);
-int					ft_isdigit(int c);
-int					ft_isalnum(int c);
-int					ft_isascii(int c);
-int					ft_isprint(int c);
-int					ft_toupper(int c);
-int					ft_tolower(int c);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void	**ap);
 char				*ft_strnew(size_t size);
@@ -67,7 +92,6 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
-char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);

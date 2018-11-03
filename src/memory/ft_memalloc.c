@@ -6,14 +6,14 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 00:55:39 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 19:57:08 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:34:21 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 #include <stdlib.h>
 
-void		*ft_memalloc(unsigned long long size)
+void		*ft_memalloc(t_ull size)
 {
 	void	*mem;
 

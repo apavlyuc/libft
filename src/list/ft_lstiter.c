@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 13:51:15 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 19:39:54 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:12:33 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void		ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	t_list	*next;
 
-	if (lst == NULL || f == NULL)
+	if (!lst || !f)
 		return ;
 	while (lst)
 	{

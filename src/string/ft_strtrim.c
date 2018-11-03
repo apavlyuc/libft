@@ -6,32 +6,26 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 02:45:07 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:28:15 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 16:56:36 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "../../inc/libft.h"
 
-static int	is_whtspace(char c)
+char					*ft_strtrim(char const *s)
 {
-	return ((c == ' ' || c == '\n' || c == '\t') ? 1 : 0);
-}
-
-char		*ft_strtrim(char const *s)
-{
-	int		i;
-	int		j;
+	unsigned long long	i;
+	unsigned long long	j;
 
 	if (!s)
-		return (NULL);
-	while (is_whtspace(*s))
-		s++;
+		return (0);
 	i = 0;
-	j = 0;
-	while (*(s + i))
-		if (!is_whtspace(*(s + i++)) && (is_whtspace(*(s + i)) ||
-										*(s + i) == '\0'))
-			j = i;
-	return (ft_strsub(s, 0, j));
+	while (ft_isspace(*(s + i)))
+		++i;
+	j = ft_strlen(s) - 1;
+	while (ft_isspace(*(s + j)))
+		--j;
+	if (j >= i)
+		return (ft_strsub(s, i, j - i + 1));
+	return (0);
 }

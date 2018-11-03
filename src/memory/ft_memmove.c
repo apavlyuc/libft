@@ -6,13 +6,13 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:13:27 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 20:07:43 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:36:21 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-void				*ft_memmove(void *dst, const void *src, unsigned long long len)
+void				*ft_memmove(void *dst, const void *src, t_ull len)
 {
 	unsigned char	*ref1;
 	unsigned char	*ref2;

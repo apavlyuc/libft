@@ -6,15 +6,17 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:46:26 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 20:05:43 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:35:56 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int						ft_memcmp(const void *s1, const void *s2, unsigned long long n)
+#include "../../inc/libft.h"
+
+int					ft_memcmp(const void *s1, const void *s2, t_ull n)
 {
-	unsigned long long	i;
-	unsigned char		*ref1;
-	unsigned char		*ref2;
+	t_ull			i;
+	unsigned char	*ref1;
+	unsigned char	*ref2;
 
 	i = 0;
 	ref1 = (unsigned char *)s1;

@@ -6,26 +6,31 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:43:41 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:28:07 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 15:58:58 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-char		*ft_strstr(const char *haystack, const char *needle)
+char					*ft_strstr(const char *haystack, const char *needle)
 {
-	size_t	needle_len;
-	int		i;
+	unsigned long long	needle_len;
+	unsigned long long	haystack_len;
+	unsigned long long	i;
 
 	needle_len = ft_strlen(needle);
-	if (needle_len == 0)
+	haystack_len = ft_strlen(haystack);
+	if (needle_len == 0 || haystack_len == 0)
 		return ((char *)haystack);
-	i = -1;
 	haystack = ft_strchr(haystack, *needle);
 	if (!haystack)
-		return (NULL);
-	while (*(haystack + ++i))
+		return (0);
+	i = 0;
+	while (*(haystack + i) && (i + needle_len) <= haystack_len)
+	{
 		if (!ft_memcmp(haystack + i, needle, needle_len))
 			return ((char *)(haystack + i));
-	return (NULL);
+		++i;
+	}
+	return (0);
 }

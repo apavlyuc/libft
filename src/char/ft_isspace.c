@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/12 19:02:58 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/11/03 16:57:16 by apavlyuc         ###   ########.fr       */
+/*   Created: 2018/11/03 16:35:44 by apavlyuc          #+#    #+#             */
+/*   Updated: 2018/11/03 16:48:18 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char					*ft_strcpy(char *dst, const char *src)
+int	ft_isspace(int c)
 {
-	unsigned long long	i;
-
-	i = 0;
-	while (*(src + i))
-	{
-		*(dst + i) = *(src + i);
-		++i;
-	}
-	*(dst + i) = '\0';
-	return (dst);
+	if (c == ' ' || c == '\t' || c == '\n' ||
+		c == '\v' || c == '\f' || c == '\r')
+		return (1);
+	return (0);
 }

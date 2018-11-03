@@ -6,20 +6,22 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 19:08:23 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:27:41 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 18:02:24 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+char		*ft_strncpy(char *dst, const char *src, t_ull len)
 {
-	int i;
+	t_ull	i;
 
-	i = -1;
-	while (++i < (int)len && *(src + i) != '\0')
+	i = 0;
+	while (i < len && *(src + i) != '\0')
+	{
 		*(dst + i) = *(src + i);
-	while (i < (int)len)
-		*(dst + i++) = '\0';
+		++i;
+	}
+	ft_bzero((void *)(dst + i), len - i);
 	return (dst);
 }

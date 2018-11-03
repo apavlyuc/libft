@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 13:45:50 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 19:38:14 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:13:14 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_lstadd(t_list **alst, t_list *new)
 {
-	if (alst == NULL || new == NULL)
+	if (!alst || !new)
 		return ;
 	new->next = *alst;
 	*alst = new;

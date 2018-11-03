@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 19:06:21 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 19:48:32 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:13:28 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		ft_lstadd_last(t_list **dst, t_list *new)
 
 	if (!dst || !new)
 		return ;
-	if (*dst == NULL)
+	if (!(*dst))
 	{
 		*dst = new;
 		return ;

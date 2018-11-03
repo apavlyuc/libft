@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 23:39:59 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:26:37 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 13:39:41 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char		*ft_replace(char *str, char *old, char *new)
 	int		length;
 	char	*p;
 
-	if (!str || !old || !new || ft_strlen(str) == 0 || ft_strlen(old) == 0)
+	if (!str || !old || !new || !*str || !*old)
 		return (NULL);
 	if (!(newstr = (char *)malloc(sizeof(char) *
 						(length = newstr_length(str, old, new)) + 1)))

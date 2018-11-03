@@ -6,36 +6,23 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 21:55:40 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:26:33 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:09:41 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-int		ft_partscount(char *str, char *del)
+unsigned long long		ft_partscount(char *str, char *part)
 {
-	int count;
-	int i;
+	unsigned long long	count;
 
-	if (!str || !del)
-		return (0);
 	count = 0;
-	i = 0;
-	while (*str != '\0')
+	if (!str || !part)
+		return (count);
+	while ((str = ft_strstr(str, part)))
 	{
-		if (*str == *(del + i))
-			i++;
-		else
-		{
-			str = str - i;
-			i = 0;
-		}
-		if (i == (int)ft_strlen(del))
-		{
-			count++;
-			i = 0;
-		}
-		str++;
+		++count;
+		str += ft_strlen(part);
 	}
 	return (count);
 }

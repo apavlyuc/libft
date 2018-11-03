@@ -3,21 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apavlyuc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 01:28:29 by apavlyuc          #+#    #+#             */
-/*   Updated: 2017/11/24 01:39:19 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 14:06:01 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striter(char *s, void (*f)(char *s))
+void					ft_striter(char *s, void (*f)(char *s))
 {
-	int i;
+	unsigned long long	i;
 
-	i = -1;
+	i = 0;
 	if (s && f)
-	{
-		while (*(s + ++i) != '\0')
+		while (*(s + i))
+		{
 			f(s + i);
-	}
+			++i;
+		}
 }

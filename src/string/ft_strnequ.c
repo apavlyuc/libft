@@ -6,13 +6,13 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 02:06:02 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:27:45 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 15:32:12 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+int	ft_strnequ(char const *s1, char const *s2, unsigned long long n)
 {
 	if (!s1 || !s2)
 		return (0);

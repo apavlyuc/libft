@@ -6,13 +6,13 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 20:45:24 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 19:55:22 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:34:21 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-void	ft_bzero(void *s, unsigned long long n)
+void	ft_bzero(void *s, t_ull n)
 {
 	ft_memset(s, 0, n);
 }

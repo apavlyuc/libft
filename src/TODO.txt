@@ -1,0 +1,10 @@
+memory/
+	ft_malloc
+	ft_free
+string/
+	ft_replace.c | refactoring
+	ft_strcpy.c  | ft_strncpy use
+	ft_strsplit  | refactoring
+
+all:
+	test this shit

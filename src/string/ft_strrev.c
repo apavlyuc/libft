@@ -6,27 +6,31 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 01:52:30 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:28:01 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 15:52:09 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "../../inc/libft.h"
 
-char		*ft_strrev(char *s)
+char					*ft_strrev(char *s)
 {
-	char	*rev;
-	int		i;
+	char				*rev;
+	unsigned long long	i;
+	unsigned long long	j;
 
 	if (!s)
-		return (NULL);
+		return (0);
 	i = ft_strlen(s);
-	rev = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	while (i != -1)
+	rev = ft_strnew(i);
+	if (!rev)
+		return (0);
+	j = 0;
+	while (i != 0)
 	{
-		*rev++ = *(s + i);
+		*(rev + j) = *(s + i - 1);
+		j++;
 		i--;
 	}
-	*rev = '\0';
-	return (rev - ft_strlen(s));
+	*(rev + j) = '\0';
+	return (rev);
 }

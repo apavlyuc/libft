@@ -6,15 +6,17 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 20:50:44 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 20:06:36 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:36:05 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void					*ft_memcpy(void *dst, const void *src, unsigned long long n)
+#include "../../inc/libft.h"
+
+void				*ft_memcpy(void *dst, const void *src, t_ull n)
 {
-	unsigned long long	i;
-	unsigned char		*ref1;
-	unsigned char		*ref2;
+	t_ull			i;
+	unsigned char	*ref1;
+	unsigned char	*ref2;
 
 	i = 0;
 	ref1 = (unsigned char *)dst;

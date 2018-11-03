@@ -6,13 +6,13 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 13:30:55 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 19:38:37 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 17:33:41 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-void		ft_lstdel(t_list **alst, void (*del)(void *, unsigned long long))
+void		ft_lstdel(t_list **alst, void (*del)(void *, t_ull))
 {
 	t_list	*next;
 

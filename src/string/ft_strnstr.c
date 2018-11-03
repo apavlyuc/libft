@@ -6,25 +6,28 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:02:20 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:27:53 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 18:10:34 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-char		*ft_strnstr(const char *h, const char *n, size_t l)
+char		*ft_strnstr(const char *h, const char *n, unsigned long long l)
 {
-	size_t	needle_len;
-	int		len;
-	int		i;
+	t_ull	needle_len;
+	t_ull	len;
+	t_ull	i;
 
 	needle_len = ft_strlen(n);
 	if (needle_len == 0)
 		return ((char *)h);
-	len = (int)(l - needle_len);
-	i = -1;
-	while (*(h + ++i) && len-- >= 0)
+	len = l - needle_len;
+	i = 0;
+	while (*(h + i) && i < len)
+	{
 		if (!ft_memcmp(h + i, n, needle_len))
 			return ((char *)(h + i));
-	return (NULL);
+		++i;
+	}
+	return (0);
 }

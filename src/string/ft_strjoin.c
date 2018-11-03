@@ -6,24 +6,24 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 02:35:48 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:27:15 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 14:11:25 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "../../inc/libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char					*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*string;
+	char				*string;
+	unsigned long long	s1_len;
 
 	if (!s1 || !s2)
-		return (NULL);
-	string = (char *)malloc(sizeof(char) * (ft_strlen(s1) +
-											ft_strlen(s2) + 1));
+		return (0);
+	s1_len = ft_strlen(s1);
+	string = ft_strnew(s1_len + ft_strlen(s2));
 	if (!string)
-		return (NULL);
+		return (0);
 	ft_strcpy(string, s1);
-	ft_strcpy(string + ft_strlen(s1), s2);
+	ft_strcpy(string + s1_len, s2);
 	return (string);
 }

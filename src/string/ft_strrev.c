@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 01:52:30 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/11/03 15:52:09 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 18:52:14 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,9 @@ char					*ft_strrev(char *s)
 	unsigned long long	i;
 	unsigned long long	j;
 
-	if (!s)
-		return (0);
+	RETN_IF_NULL(s);
 	i = ft_strlen(s);
-	rev = ft_strnew(i);
-	if (!rev)
-		return (0);
+	RETN_IF_NULL((rev = ft_strnew(i)));
 	j = 0;
 	while (i != 0)
 	{

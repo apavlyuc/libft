@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 16:14:49 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/11/03 17:48:14 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 18:40:02 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ long long			ft_pow(int n, int p);
 t_ull				ft_linecount(char *str);
 t_ull				ft_partscount(char *str, char *del);
 t_ull				ft_strlen(const char *s);
-char				*ft_replace(char *str, char *old, char *new);
+char				*ft_strreplace(char *str, char *old, char *new);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, t_ull n);
 t_ull				ft_strlcat(char *dst, const char *src, t_ull detsize);

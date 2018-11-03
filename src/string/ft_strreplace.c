@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_replace.c                                       :+:      :+:    :+:   */
+/*   ft_strreplace.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 23:39:59 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/11/03 13:39:41 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 18:45:38 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
-#include <stdlib.h>
 
-static int	newstr_length(char *str, char *old, char *new)
+static t_ull	newstr_length(char *str, char *old, char *new)
 {
 	return (ft_strlen(str) + (-ft_strlen(old) +
 							ft_strlen(new)) * ft_partscount(str, old));
 }
 
-char		*ft_replace(char *str, char *old, char *new)
+char			*ft_strreplace(char *str, char *old, char *new)
 {
-	char	*newstr;
-	int		i;
-	int		length;
-	char	*p;
+	char		*newstr;
+	int			i;
+	t_ull		length;
+	char		*p;
 
 	if (!str || !old || !new || !*str || !*old)
-		return (NULL);
-	if (!(newstr = (char *)malloc(sizeof(char) *
-						(length = newstr_length(str, old, new)) + 1)))
-		return (NULL);
-	*(newstr + length) = '\0';
+		return (0);
+	length = newstr_length(str, old, new);
+	RETN_IF_NULL((newstr = ft_strnew(length)));
 	p = newstr;
 	while (length--)
 	{

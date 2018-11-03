@@ -6,11 +6,10 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 06:07:51 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 18:27:09 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 18:59:03 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "../../inc/libft.h"
 
 static int		get_del(long long n)
@@ -33,8 +32,7 @@ char			*ft_itoa(int n)
 	int			del;
 
 	number = n;
-	RETN_IF_NULL((ret = (char *)
-		ft_memalloc(sizeof(char) * (ft_numlen(number) + 1))));
+	RETN_IF_NULL((ret = ft_strnew(ft_numlen(number))));
 	i = 0;
 	if (n < 0)
 	{

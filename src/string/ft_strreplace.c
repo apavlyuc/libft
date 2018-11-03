@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 23:39:59 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/11/03 18:45:38 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 19:06:35 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static t_ull	newstr_length(char *str, char *old, char *new)
 char			*ft_strreplace(char *str, char *old, char *new)
 {
 	char		*newstr;
-	int			i;
+	t_ull		i;
 	t_ull		length;
 	char		*p;
 
@@ -32,12 +32,12 @@ char			*ft_strreplace(char *str, char *old, char *new)
 	p = newstr;
 	while (length--)
 	{
-		i = -1;
+		i = 0;
 		if (str == ft_strstr(str, old))
 		{
-			while (*(new + ++i))
-				*newstr++ = *(new + i);
-			str = ft_strstr(str, old) + ft_strlen(old);
+			while (*(new + i))
+				*newstr++ = *(new + i++);
+			str += ft_strlen(old);
 		}
 		else
 			*newstr++ = *str++;

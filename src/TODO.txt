@@ -1,8 +1,6 @@
 memory/
 	ft_malloc
 	ft_free
-string/
-	ft_strsplit  | refactoring
 
 all:
 	test this shit

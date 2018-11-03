@@ -6,44 +6,46 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 17:23:31 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/10/30 17:28:04 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2018/11/03 19:17:10 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
-static int	get_count(char const *s, char c)
+static t_ull	get_count(char const *s, char c)
 {
-	int		count;
-	int		i;
+	t_ull		count;
+	t_ull		i;
 
 	i = 0;
 	count = 0;
-	while (*(s + i) != '\0')
+	while (*(s + i))
 	{
 		while (*(s + i) == c)
 			i++;
-		if (*(s + i) != '\0')
+		if (*(s + i))
 			count++;
-		while (*(s + i) != c && *(s + i) != '\0')
+		while (*(s + i) != c && *(s + i))
 			i++;
 	}
 	return (count);
 }
 
-static int	get_length(char const *s, char c)
+static t_ull	get_length(char const *s, char c)
 {
-	int		length;
+	t_ull		length;
 
 	length = 0;
-	while (*s != c && *s++ != '\0')
+	while (*s && *s != c)
+	{
 		length++;
+		++s;
+	}
 	return (length);
 }
 
-static void	deleter(char **box)
+static void		deleter(char **box)
 {
 	while (*box)
 	{
@@ -52,16 +54,16 @@ static void	deleter(char **box)
 	}
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	int		i;
-	int		parts;
-	int		length;
-	char	**box;
+	t_ull		i;
+	t_ull		parts;
+	t_ull		length;
+	char		**box;
 
-	if (!s || c == '\0' || !(box = (char **)malloc(sizeof(char *) * \
+	if (!s || c == '\0' || !(box = (char **)ft_memalloc(sizeof(char *) * \
 											((parts = get_count(s, c)) + 1))))
-		return (NULL);
+		return (0);
 	i = 0;
 	while (i < parts)
 	{
@@ -73,7 +75,7 @@ char		**ft_strsplit(char const *s, char c)
 		{
 			deleter(box);
 			ft_strdel((char **)&box);
-			return (NULL);
+			return (0);
 		}
 		s += length;
 	}

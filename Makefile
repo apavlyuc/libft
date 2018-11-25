@@ -21,9 +21,6 @@ OBJ_DIR			:= build# will be created automatically
 CC 				:= gcc
 FLAGS 			:= -Wall -Wextra -Werror -I./$(INC_DIR)
 
-# check norms, for 42-school. Need installed norminette
-NORM_CHECK		:= $(shell command -v norminette)
-
 DIRS			:= $(patsubst $(SRC_DIR)%,$(OBJ_DIR)%,$(shell find $(SRC_DIR) -type d))
 SRCS			:= $(shell find $(SRC_DIR) -type f -name "*.c")
 OBJS			:= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
@@ -47,12 +44,5 @@ fclean: clean
 	@rm -f $(TARGET)
 
 re: fclean all
-
-norm:
-ifeq (,$(NORM_CHECK))
-	@echo "DEUS VULT!!1"
-else
-	@find . -type f -name ".*[ch]" -exec norminette {} \+
-endif
 
 .PHONY: all clean fclean re

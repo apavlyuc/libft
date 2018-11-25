@@ -16,5 +16,5 @@
 void	ft_putstr(char	const *s)
 {
 	if (s)
-		write(STDOUT_FILENO, s, ft_strlen(s));
+		write(1, s, ft_strlen(s));
 }

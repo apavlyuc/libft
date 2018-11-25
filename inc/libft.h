@@ -13,26 +13,10 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# ifndef EXIT_IF_NULL
-#  define EXIT_IF_NULL(x) if (!x) exit(-1);
-# endif
+#include "libft_types.h"
+#include "libft_defines.h"
+#include "ft_malloc.h"
 
-# ifndef RERN_IF_NULL
-#  define RETN_IF_NULL(x) if (!x) return (x);
-# endif
-
-# ifndef RET_IF_NULL
-#  define RET_IF_NULL(x) if (!x) return ;
-# endif
-
-typedef unsigned long long	t_ull;
-
-typedef struct		s_list
-{
-	void			*content;
-	t_ull			content_size;
-	struct s_list	*next;
-}					t_list;
 /*
 **			char block
 */

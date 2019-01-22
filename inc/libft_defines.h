@@ -5,7 +5,7 @@
 #  define EXIT_IF_NULL(x) if (!x) exit(-1);
 # endif
 
-# ifndef RERN_IF_NULL
+# ifndef RETN_IF_NULL
 #  define RETN_IF_NULL(x) if (!x) return (x);
 # endif
 

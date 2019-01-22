@@ -24,7 +24,10 @@ static	int	get_number(const char *str)
 	else if (*str == '+')
 		++str;
 	while (*str <= '9' && *str >= '0')
+	{
 		ret = ret * 10 + (*str - 48);
+		++str;
+	}
 	return (ret * sign);
 }
 

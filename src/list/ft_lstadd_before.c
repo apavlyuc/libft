@@ -12,7 +12,7 @@
 
 #include "../../inc/libft.h"
 
-void		ft_lstadd(t_list **alst, t_list *new)
+void		ft_lstadd_before(t_list **alst, t_list *new)
 {
 	if (!alst || !new)
 		return ;

@@ -43,6 +43,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr(int n);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putstr(char const *s);
+int					get_next_line(const int fd, char **line);
 /*
 **			list block
 */

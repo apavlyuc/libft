@@ -12,10 +12,10 @@
 
 #include "../../inc/libft.h"
 
-char					*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
-	unsigned long long	i;
-	unsigned long long	j;
+	t_ull	i;
+	t_ull	j;
 
 	if (!s)
 		return (0);

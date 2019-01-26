@@ -12,11 +12,11 @@
 
 #include "../../inc/libft.h"
 
-char					*ft_strrev(char *s)
+char		*ft_strrev(char *s)
 {
-	char				*rev;
-	unsigned long long	i;
-	unsigned long long	j;
+	char	*rev;
+	t_ull	i;
+	t_ull	j;
 
 	RETN_IF_NULL(s);
 	i = ft_strlen(s);

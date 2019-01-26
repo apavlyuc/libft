@@ -12,9 +12,9 @@
 
 #include "../../inc/libft.h"
 
-unsigned long long		ft_partscount(char *str, char *part)
+t_ull		ft_partscount(char *str, char *part)
 {
-	unsigned long long	count;
+	t_ull	count;
 
 	count = 0;
 	if (!str || !part)

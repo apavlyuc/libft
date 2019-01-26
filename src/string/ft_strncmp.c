@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int						ft_strncmp(const char *s1, const char *s2,
-unsigned long long n)
+#include "../../inc/libft_types.h"
+
+int	ft_strncmp(const char *s1, const char *s2, t_ull n)
 {
 	while (*s1 && n--)
 	{

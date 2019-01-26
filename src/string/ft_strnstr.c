@@ -12,7 +12,7 @@
 
 #include "../../inc/libft.h"
 
-char		*ft_strnstr(const char *h, const char *n, unsigned long long l)
+char		*ft_strnstr(const char *h, const char *n, t_ull l)
 {
 	t_ull	needle_len;
 	t_ull	len;

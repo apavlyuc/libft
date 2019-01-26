@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
-#include <stdlib.h>
 
-char		*ft_strnew(unsigned long long size)
+char		*ft_strnew(t_ull size)
 {
 	char	*href;
 
 	++size;
-	RETN_IF_NULL((href = (char *)malloc(size * sizeof(char))));
+	href = (char *)ft_memalloc(size * sizeof(char));
+	RETN_IF_NULL(href);
 	ft_bzero(href, size);
 	return (href);
 }

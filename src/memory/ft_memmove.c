@@ -19,7 +19,7 @@ void				*ft_memmove(void *dst, const void *src, t_ull len)
 
 	ref1 = (unsigned char *)dst;
 	ref2 = (unsigned char *)src;
-	if ((unsigned long long)dst < (unsigned long long)src)
+	if ((t_ull)dst < (t_ull)src)
 		ft_memcpy(dst, src, len);
 	else
 		while (len--)

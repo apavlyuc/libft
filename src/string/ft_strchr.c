@@ -12,10 +12,10 @@
 
 #include "../../inc/libft.h"
 
-char					*ft_strchr(const char *s, int c)
+char		*ft_strchr(const char *s, int c)
 {
-	char				*ref;
-	unsigned long long	i;
+	char	*ref;
+	t_ull	i;
 
 	if (c == 0)
 		return (char *)(s + ft_strlen(s));

@@ -55,6 +55,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, t_ull content_size);
 t_list				*ft_lstdup(t_list *lst);
+void				ft_del_handler(void *content, t_ull content_size);
 /*
 **			memory block
 */

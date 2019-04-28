@@ -15,6 +15,7 @@ static	int	get_number(const char *str)
 	int		ret;
 	char	sign;
 
+	ret = 0;
 	sign = 1;
 	if (*str == '-')
 	{

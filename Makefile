@@ -19,7 +19,7 @@ INC_DIR			:= inc
 OBJ_DIR			:= build# will be created automatically
 
 CC 				:= gcc
-FLAGS 			:= -Wall -Wextra -Werror -I./$(INC_DIR)
+FLAGS 			:= -Wall -Wextra -Ofast -I./$(INC_DIR)
 
 DIRS			:= $(patsubst $(SRC_DIR)%,$(OBJ_DIR)%,$(shell find $(SRC_DIR) -type d))
 SRCS			:= $(shell find $(SRC_DIR) -type f -name "*.c")

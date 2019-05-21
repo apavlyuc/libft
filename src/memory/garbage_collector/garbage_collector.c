@@ -62,6 +62,8 @@ void				clear_garbage_collector()
 	t_garbage		*temp;
 
 	collector = get_collector();
+	if (!collector->is_active)
+		return;
 	temp = collector->garbage;
 	while (temp)
 	{

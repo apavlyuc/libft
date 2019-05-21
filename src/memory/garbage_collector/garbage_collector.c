@@ -1,7 +1,5 @@
 #include "../../../inc/garbage_collector.h"
-#include "../../../inc/libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 typedef struct s_collector	t_collector;
 typedef struct s_garbage	t_garbage;
@@ -21,7 +19,7 @@ void				turn_on_garbage_collector()
 	collector->is_active = 1;
 }
 
-void				turn_of_garbage_collector()
+void				turn_off_garbage_collector()
 {
 	t_collector		*collector;
 
@@ -69,7 +67,6 @@ void				clear_garbage_collector()
 	{
 		if (temp->ptr)
 		{
-			ft_putendl("clear\n");
 			free(temp->ptr);
 			temp->ptr = 0;
 		}

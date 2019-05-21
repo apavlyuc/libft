@@ -19,5 +19,6 @@ void		*ft_memalloc(t_ull size)
 
 	RETN_IF_NULL((mem = malloc(size)));
 	ft_bzero(mem, size);
+	add_to_storage(mem);
 	return (mem);
 }

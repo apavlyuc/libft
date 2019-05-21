@@ -13,8 +13,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include "libft_types.h"
-#include "libft_defines.h"
+# include "libft_types.h"
+# include "libft_defines.h"
+# include "garbage_collector.h"
 
 /*
 **			char block

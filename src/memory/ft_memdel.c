@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../inc/garbage_collector.h"
 #include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {
 	if (ap && *ap)
 	{
+		remove_from_storage(*ap);
 		free(*ap);
 		*ap = 0;
 	}

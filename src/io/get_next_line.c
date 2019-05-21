@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 #ifndef _GNL_BUFFER_SIZE_
-# define _GNL_BUFFER_SIZE_ 100
+# define _GNL_BUFFER_SIZE_ 1024
 #endif
 
 #ifndef _GNL_NULL_CHECK_

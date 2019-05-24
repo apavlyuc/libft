@@ -11,20 +11,14 @@ static t_collector	*get_collector()
 	return (&collector);
 }
 
-void				turn_on_garbage_collector()
+void				set_active(int status)
 {
-	t_collector		*collector;
+	t_collector			*collector;
 
+	if (status != 1 && status != 0)
+		return;
 	collector = get_collector();
-	collector->is_active = 1;
-}
-
-void				turn_off_garbage_collector()
-{
-	t_collector		*collector;
-
-	collector = get_collector();
-	collector->is_active = 0;
+	collector->is_active = status;
 }
 
 void				add_to_storage(void *ptr)

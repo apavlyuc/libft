@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   garbage_collector.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/25 16:30:14 by apavlyuc          #+#    #+#             */
+/*   Updated: 2019/05/25 16:33:16 by apavlyuc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../inc/garbage_collector.h"
 #include <stdlib.h>
 
 typedef struct s_collector	t_collector;
 typedef struct s_garbage	t_garbage;
 
-static t_collector	*get_collector()
+static t_collector	*get_collector(void)
 {
 	static t_collector collector = {0, 1};
 
@@ -16,7 +28,7 @@ void				set_active(int status)
 	t_collector			*collector;
 
 	if (status != 1 && status != 0)
-		return;
+		return ;
 	collector = get_collector();
 	collector->is_active = status;
 }
@@ -27,10 +39,10 @@ void				add_to_storage(void *ptr)
 	t_garbage		*temp;
 
 	if (!ptr)
-		return;
+		return ;
 	collector = get_collector();
 	if (collector->is_active == 0)
-		return;
+		return ;
 	if (!collector->garbage)
 	{
 		collector->garbage = (t_garbage *)malloc(sizeof(t_garbage));
@@ -48,14 +60,14 @@ void				add_to_storage(void *ptr)
 	}
 }
 
-void				clear_garbage_collector()
+void				clear_garbage_collector(void)
 {
 	t_collector		*collector;
 	t_garbage		*temp;
 
 	collector = get_collector();
 	if (!collector->is_active)
-		return;
+		return ;
 	temp = collector->garbage;
 	while (temp)
 	{

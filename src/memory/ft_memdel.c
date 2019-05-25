@@ -6,7 +6,7 @@
 /*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 01:11:00 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/11/03 17:36:14 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2019/05/25 14:11:50 by apavlyuc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_memdel(void **ap)
 {
 	if (ap && *ap)
 	{
-		remove_from_storage(*ap);
-		free(*ap);
+		if (remove_from_storage(*ap) == 1)
+			free(*ap);
 		*ap = 0;
 	}
 }

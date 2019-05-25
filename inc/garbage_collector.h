@@ -12,7 +12,7 @@ struct s_collector {
 };
 
 void	add_to_storage(void *ptr);
-void	remove_from_storage(void *ptr);
+int		remove_from_storage(void *ptr);
 void	turn_on_garbage_collector();
 void	turn_off_garbage_collector();
 void	clear_garbage_collector();

@@ -6,7 +6,7 @@
 #    By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/30 12:54:21 by apavlyuc          #+#    #+#              #
-#    Updated: 2018/10/30 20:10:20 by apavlyuc         ###   ########.fr        #
+#    Updated: 2019/05/25 12:39:41 by apavlyuc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ INC_DIR			:= inc
 OBJ_DIR			:= build# will be created automatically
 
 CC 				:= gcc
-FLAGS 			:= -Wall -Wextra -Ofast -I./$(INC_DIR)
+FLAGS 			:= -Wall -Werror -Wextra -Ofast -I./$(INC_DIR)
 
 DIRS			:= $(patsubst $(SRC_DIR)%,$(OBJ_DIR)%,$(shell find $(SRC_DIR) -type d))
 SRCS			:= $(shell find $(SRC_DIR) -type f -name "*.c")

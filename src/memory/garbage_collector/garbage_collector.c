@@ -74,14 +74,14 @@ void				clear_garbage_collector()
 	}
 }
 
-void				remove_from_storage(void *ptr)
+int					remove_from_storage(void *ptr)
 {
 	t_collector		*collector;
 	t_garbage		*curr;
 	t_garbage		*prev;
 
 	if (!ptr)
-		return;
+		return (0);
 	collector = get_collector();
 	curr = collector->garbage;
 	prev = 0;
@@ -94,9 +94,10 @@ void				remove_from_storage(void *ptr)
 			else
 				collector->garbage = curr->next;
 			free(curr);
-			break;
+			return (1);
 		}
 		prev = curr;
 		curr = curr->next;
 	}
+	return (0);
 }

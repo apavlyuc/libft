@@ -15,6 +15,8 @@
 
 void	ft_putstr(char	const *s)
 {
+	int	ret;
 	if (s)
-		write(1, s, ft_strlen(s));
+		ret = write(1, s, ft_strlen(s));
+	(void)ret;
 }

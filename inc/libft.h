@@ -80,7 +80,7 @@ long long			ft_pow(int n, int p);
 **			string block
 */
 t_ull				ft_linecount(char *str);
-t_ull				ft_partscount(char *str, char *del);
+t_ull				ft_partscount(char const *str, char const *del);
 t_ull				ft_strlen(const char *s);
 char				*ft_strreplace(char *str, char *old, char *new);
 char				*ft_strcat(char *s1, const char *s2);

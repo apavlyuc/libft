@@ -12,7 +12,7 @@
 
 #include "../../inc/libft.h"
 
-t_ull		ft_partscount(char *str, char *part)
+t_ull		ft_partscount(char const *str, char const *part)
 {
 	t_ull	count;
 

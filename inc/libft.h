@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apavlyuc <apavlyuc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 16:14:49 by apavlyuc          #+#    #+#             */
-/*   Updated: 2018/11/03 18:40:02 by apavlyuc         ###   ########.fr       */
+/*   Updated: 2019/07/08 18:34:22 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ void				ft_memdel(void	**ap);
 t_ull				ft_factorial(int n);
 int					ft_numlen(long long num);
 int					ft_abs(int n);
+long long			ft_max_signed(long long a, long long b);
+t_ull				ft_max_unsigned(t_ull a, t_ull b);
 long long			ft_pow(int n, int p);
 /*
 **			string block

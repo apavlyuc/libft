@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/08 17:19:04 by marvin            #+#    #+#             */
-/*   Updated: 2019/07/08 17:19:04 by marvin           ###   ########.fr       */
+/*   Created: 2019/07/10 12:48:34 by marvin            #+#    #+#             */
+/*   Updated: 2019/07/10 12:48:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <libft_vector.h>
+#ifndef LIBFT_TEST_H
+# define LIBFT_TEST
 
-#include <stdio.h>
+void	run_test_for_char_folder();
 
-#include "libft_test.h"
-
-int				main(int ac, char **av)
-{
-	run_test_for_char_folder();
-	return (0);
-}
+#endif

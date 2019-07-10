@@ -1,5 +1,5 @@
 .*/
 build/
 *.a
-*.out
-main.c
+tests/build/
+tests/checker
